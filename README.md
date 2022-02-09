@@ -24,7 +24,7 @@ This repository provides our customed ridgeback integration with KUKA LBR iiwa 7
 
 3. Clone **ridgeback** related repositories:
   ```sh
-  git clone https://github.com/ridgeback/ridgeback.git
+  git clone -b glab/drawing https://github.com/daeunSong/ridgeback.git
   git clone https://github.com/ridgeback/ridgeback_desktop.git
   git clone https://github.com/ridgeback/ridgeback_simulator.git
   ```
