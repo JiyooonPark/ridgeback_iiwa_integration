@@ -54,14 +54,24 @@
       <link name="body">
         <collision name="collision">
           <geometry>
+<<<<<<< Updated upstream:ridgeback_iiwa_gazebo/worlds/smooth_curve_world.sdf
             <mesh><uri>model://walls/smooth_curve.stl</uri></mesh>
+=======
+            <mesh>
+              <uri>model://smooth_curve.stl</uri>
+            </mesh>
+>>>>>>> Stashed changes:ridgeback_iiwa_gazebo/worlds/smooth_curve_world.world
           </geometry>
               </collision>
         <visual name="visual">
           <geometry>
             <mesh>
+<<<<<<< Updated upstream:ridgeback_iiwa_gazebo/worlds/smooth_curve_world.sdf
               <uri>model://walls/smooth_curve.stl</uri>
                 <scale>1.0 1.0 1.0</scale>
+=======
+              <uri>model://smooth_curve.stl</uri>
+>>>>>>> Stashed changes:ridgeback_iiwa_gazebo/worlds/smooth_curve_world.world
             </mesh>
             </geometry>
         </visual>

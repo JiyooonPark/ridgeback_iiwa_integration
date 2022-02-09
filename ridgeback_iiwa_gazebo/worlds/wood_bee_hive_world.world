@@ -13,13 +13,21 @@
       <link name="body">
         <collision name='collision'>
           <geometry>
+<<<<<<< Updated upstream
             <mesh><uri>model://worlds/mesh/wood_bee_hive.stl</uri></mesh>
+=======
+            <mesh><uri>model://wood_bee_hive_three.stl</uri></mesh>
+>>>>>>> Stashed changes
           </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
+<<<<<<< Updated upstream
             <uri>model://worlds/mesh/wood_bee_hive.stl</uri>
+=======
+            <uri>model://wood_bee_hive_three.stl</uri>
+>>>>>>> Stashed changes
               <scale>1.0 1.0 1.0</scale>
           </mesh>
           </geometry>

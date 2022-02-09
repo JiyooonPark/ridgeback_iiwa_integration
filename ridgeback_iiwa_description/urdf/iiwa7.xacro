@@ -14,6 +14,8 @@
   <xacro:property name="joint_damping" value="0.5" />
   <xacro:property name="max_effort" value="300"/>
   <xacro:property name="max_velocity" value="10"/>
+  <xacro:property name="camera_link" value="0.1" /> <!-- Size of square 'camera' box -->
+
 
   <xacro:macro name="iiwa7" params="parent hardware_interface robot_name *origin">
 
@@ -319,6 +321,39 @@
     <!--Extensions -->
     <xacro:iiwa_gazebo robot_name="${robot_name}" />
     <xacro:iiwa_transmission hardware_interface="${hardware_interface}"/>
+
+
+  <joint name="camera_joint" type="fixed">
+    <axis xyz="0 0 1" />
+    <origin xyz="${camera_link} 0 0" rpy="0 0 0"/>
+    <parent link="${robot_name}_link_ee"/>
+    <child link="camera_link"/>
+  </joint>
+
+  <!-- Camera -->
+  <link name="camera_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="${camera_link} ${camera_link} ${camera_link}"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="${camera_link} ${camera_link} ${camera_link}"/>
+      </geometry>
+      <material name="Red"/>
+    </visual>
+
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+    
+  </link>
 
   </xacro:macro>
 
