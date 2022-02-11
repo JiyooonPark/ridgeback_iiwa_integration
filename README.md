@@ -45,6 +45,10 @@ This repository provides our customed ridgeback integration with KUKA LBR iiwa 7
 
 `export RIDGEBACK_URDF_EXTRAS=$(catkin_find ridgeback_iiwa_description urdf/ridgeback_iiwa_robot.urdf.xacro --first-only)`
 
+to use the camera attached version
+
+`export RIDGEBACK_URDF_EXTRAS=$(catkin_find ridgeback_iiwa_description urdf/ridgeback_iiwa_robot_camera.urdf.xacro --first-only)`
+
 7. Build the workspace:
   ```sh
   catkin build
